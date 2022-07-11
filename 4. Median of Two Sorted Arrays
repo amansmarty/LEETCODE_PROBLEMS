@@ -1,0 +1,14 @@
+function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
+        var res=0;
+        var x=nums1.length+nums2.length;
+        var v=nums1.concat(nums2);
+        let t1 = v.sort((n1,n2) => n1 - n2);
+        var y=t1.length;
+        var z=y/2;
+        if(y%2!=0) res=t1[Math.floor(z)];
+        else {
+            var a=(t1[z-1]+t1[z])
+            res=a/2;
+        }
+        return res;
+};
